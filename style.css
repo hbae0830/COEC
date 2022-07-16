@@ -16,6 +16,7 @@ header{
 .list{
     display: flex;
     margin-right: 60px;
+    white-space: nowrap;
 }
 
 .list li{
@@ -25,8 +26,45 @@ header{
 .log{
     display: flex;
     margin-right: 60px;
+    white-space: nowrap;
 }
 
 .log li{
     margin-right: 50px;
+}
+
+.navbar__toggleBtn {
+    right: 10px;
+    font-size: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .list{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        display: none;
+    }
+
+    li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .log{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        display: none;
+    }
+
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .list.active,
+    .log.active {
+        display: flex;
+    }
 }
