@@ -44,25 +44,46 @@ header{
     height: 300px;
     line-height: 300px;
     margin: 0 auto;
-    background-color: #BEEFFF;
+    background-color: rgb(225, 238, 254)
 }
 
-.banner__char {
+.banner__char_1 {
     height: 5px;
     margin-left: 150px;
+    line-height: 150px;
+}
+
+.banner__char_2 {
+    height: 5px;
+    margin-left: 150px;
+    line-height: 205px;
+}
+
+.banner__char_3 {
+    height: 5px;
+    margin-left: 150px;
+    line-height: 210px;
+}
+
+.banner__partnerBtn {
+    height: 30px;
+    margin-left: 105px;
 }
 
 #banner__leftBtn {
     float: left;
+    margin-left: 20px;
+    color:#D6D6D6
 }
 
-#banner_rightBtn {
+#banner__rightBtn {
     float: right;
+    margin-right: 20px;
+    color:#D6D6D6
 }
 
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
