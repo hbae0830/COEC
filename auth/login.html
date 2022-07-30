@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body>
+    <button type="button" class="btn__open">팝업 열기</button>
+    <div id="mask"></div>
+        <div class="popup__box">
+            <h2 class="popup__char">로그인</h2>  
+            <div class="popup__close">
+		        <button type="button" class="btn__close">
+                    <i class="fa-solid fa-xmark fa-2x"></i>
+                </button>
+	        </div>
+            <input class="popup__username" type="text" name="username" placeholder="아이디">
+            <input class="popup__password" type="password" name="password" placeholder="비밀번호">
+            <input a href="#" class="popup__logInBtn" type="image" src="#">
+            <input a href="#" class="popup__signInBtn" type="image" src="#">
+            <ul class="popup__findMyIdBtn">
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+            </ul>
+            <ul class="popup__easyLogInBtn">
+                <li><input a href="#" type="image" src="#"></li>
+                <li><input a href="#" type="image" src="#"></li>
+                <li><input a href="#" type="image" src="#"></li>
+                <li><input a href="#" type="image" src="#"></li>
+            </ul>
+	    </div>
+    <script src="https://kit.fontawesome.com/cf416b0d1e.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn__open").click(function() {
+                $(".popup__box").show();
+        });
+       
+        $(".btn__close").click(function() {
+            $(".popup__box").hide();
+        });
+   
+        // 팝업 중앙 정렬
+        var $layerPopup = $(".popup__box");
+        var left = ($(window).scrollLeft() + ($(window).width() - $layerPopup.width()) / 2);
+        var top = ($(window).scrollTop() + ($(window).height() - $layerPopup.height()) / 2 );
+        $layerPopup.css({ "left": left, "top":top, "position": "absolute" });
+        $("body").css("position", "relative").append($layerPopup); 
+        });
+
+        // 팝업 드래그 이벤트
+        $(function(){
+        $(".popup__box").draggable();
+        }); 
+   </script>
+</body>
+</html>

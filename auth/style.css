@@ -1,0 +1,106 @@
+#mask { 
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    background: #000; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; 
+    filter: alpha(opacity=50); 
+    zoom: 1; 
+    opacity: 0.5; 
+    z-index: 9998; 
+    display: none; 
+}
+
+.btn__open { 
+    padding: 5px 10px; 
+    background: black;
+    border: 0; 
+    color: #fff; 
+    cursor: pointer; 
+}
+
+.popup__box { 
+    display: none; 
+    width: 400px; 
+    height: 500px; 
+    background: #fff; 
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #000;
+    padding: 20px; 
+}
+
+.popup__char {
+    margin-top: 55px;
+    text-align: center;
+}
+
+.popup__close { 
+    float: right;
+    
+}
+
+.btn__close { 
+    margin-left: -40px;
+    margin-top: -105px;
+    background: none; 
+    border: 0; 
+    color: black; 
+    cursor: pointer; 
+    position:fixed;
+}
+
+.popup__username {
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: block;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+}
+
+.popup__password {
+    width: 300px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    display: block;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+}
+
+.popup__logInBtn {
+    display: block;
+    margin-left: 180px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.popup__signInBtn {
+    display: block;
+    margin-left: 180px;
+}
+
+.popup__findMyIdBtn {
+    display: flex;
+    margin-left: -40px;
+    margin-top: 40px;
+    list-style: none;
+    color:#000;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration-line: none;
+}
+
+.popup__easyLogInBtn {
+    display: flex;
+    margin-left: -40px;
+    margin-top: 100px;
+    list-style: none;
+    justify-content: space-evenly;
+}
